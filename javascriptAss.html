@@ -1,0 +1,42 @@
+<body>
+
+    <h2>CBT Test</h2>
+
+    <p id="result"></p>
+
+    How many states do we have in Nigeria
+    <br>
+    <input type="radio" id="optA" name="question" value="30">
+    <label for="optA">30</label><br>
+    <input type="radio" id="optB" name="question" value="36">
+    <label for="optB">36</label><br>
+    <input type="radio" id="optC" name="question" value="29">
+    <label for="optC">29</label>
+    <br>
+    <button type="button" onclick="displayRadioValue()">
+        Submit
+    </button>
+
+    <script>
+
+        function displayRadioValue() {
+            var ele = document.getElementsByName('question');
+
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked && ele[i].value == 36) {
+                    document.getElementById("result").innerHTML
+                        = "Correct Result: " + ele[i].value;
+                        break;
+                }
+                else {
+                    document.getElementById("result").innerHTML
+                        = "Wrong Result: " + ele[i].value;
+                }
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
